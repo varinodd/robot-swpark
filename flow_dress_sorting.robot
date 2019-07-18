@@ -2,6 +2,8 @@
 Resource  ./pages/welcome.robot
 Resource  ./pages/catalog.robot
 
+# Hello Jenkins
+
 # ข้อดีของการแยกไฟล์คือ
 # 1. อ่านง่าย (ไม่มี selenium ในไฟล์ testcase หลัก) --> ไฟล์นี้จะไม่มี technical เลย
 # 2. เวลาจะเอา test case ไปใช้กับ platform อื่นเช่น mobile ก็แค่ไปแก้ implementation ในไฟล์แต่ละหน้าย่อย (แก้ selenium เป็นอย่างอื่น) 

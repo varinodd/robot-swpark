@@ -6,6 +6,9 @@ ${URL}      http://automationpractice.com
 ${BROWSER}  gc
 
 *** Keywords ***
+Home
+    Go To  ${URL}
+
 Open
     Open Browser  ${URL}  
     ...  browser=${BROWSER}

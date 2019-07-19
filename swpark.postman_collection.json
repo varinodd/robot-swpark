@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "195e15a8-4b8f-40ea-8f20-b63ae6c55838",
+		"name": "swpark",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://jsonplaceholder.typicode.com/users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "296c3688-4cb1-4c9e-a654-b3abe094d75e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"var jsonData = pm.response.json();",
+							"pm.test(\"Size = 10\", function () {",
+							"    pm.expect(jsonData.length).to.eql(10);",
+							"});",
+							"pm.test(\"Username of first user = Bret\", function () {",
+							"    pm.expect(jsonData[0].username).to.eql(\"Bret\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
